@@ -19,6 +19,11 @@ public class Item {
     @NotNull
     private float price;
 
+    @ManyToOne
+    @JoinColumn(name = "shop_id", nullable = false)
+    @NotNull(message = "Shop não pode ser nulo")
+    private Shop shop;
+
     public Item() {
     }
 
